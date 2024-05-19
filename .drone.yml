@@ -18,10 +18,14 @@ trigger:
   name: test
 
 steps:
+- name: clone
+ image: alpine/git
+ commands:
+ - git clone https://github.com/xored2410/playwright-drone.git
+
+
 - name: playwright tests
   image: node
   commands:
-  - git clone https://github.com/xored2410/playwright-drone.git
-  - git checkout $DRONE_COMMIT
-  - npm install
+    - npm install
   - npm run test:dev
