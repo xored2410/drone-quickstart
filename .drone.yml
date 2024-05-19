@@ -2,7 +2,9 @@
 kind: pipeline
 type: docker
 name: test
- 
+
+workspace:
+  path: /
 
 steps:
 - name: clone and run tests
