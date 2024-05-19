@@ -17,20 +17,20 @@ trigger:
   type: docker
   name: test
 
-  clone:
-  disable: true
 
 trigger:
   branch:
   - master
 
 steps:
-- name: clone
+- name: clone test repo
  image: node
  commands:
- - git clone https://github.com/xored2410/playwright-drone.git
- - npm install
- - npm run test:dev
+ - git clone https://github.com/octocat/hello-world.git .
+  - git checkout $DRONE_COMMIT
+#  - git clone https://github.com/xored2410/playwright-drone.git
+#  - npm install
+#  - npm run test:dev
 
 
 # - name: playwright tests
