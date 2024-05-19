@@ -9,7 +9,7 @@ steps:
   commands:
   - git clone https://github.com/xored2410/playwright-drone.git
   - echo Trying to instal dependencies
-  - cd
+  - copy ./ ./
   - npm install
   - npm run test:dev
 
