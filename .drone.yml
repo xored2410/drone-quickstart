@@ -17,13 +17,10 @@ trigger:
   type: docker
   name: test
 
-  trigger:
-    repo:
-    - xored2410/playwright-drone
-
 steps:
 - name: playwright tests
   image: node
   commands:
+  -git clone https://github.com/xored2410/playwright-drone.git
   - npm install
   - npm run test:dev
