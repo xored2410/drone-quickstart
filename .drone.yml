@@ -17,6 +17,10 @@ trigger:
   type: docker
   name: test
 
+trigger:
+  branch:
+  - master
+
 steps:
 - name: clone
  image: node
