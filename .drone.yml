@@ -2,15 +2,14 @@
 kind: pipeline
 type: docker
 name: test
-
-workspace:
-  path: ./
+ 
 
 steps:
 - name: clone and run tests
   image: node
   commands:
   - git clone https://github.com/xored2410/playwright-drone.git
+  - npm init
   - npm install
   - npm run test:dev
 
