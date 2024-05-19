@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: default
+name: console
 
 steps:
 - name: hello from pipeline
@@ -15,11 +15,11 @@ trigger:
 ---
   kind: pipeline
   type: docker
-  name: playwright tests
+  name: test
 
   trigger:
     repo:
-    - xored2410/plawright-drone
+    - playwright-drone
 
 steps:
 - name: playwright tests
