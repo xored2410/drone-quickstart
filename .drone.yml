@@ -4,7 +4,7 @@ type: docker
 name: default
 
 steps:
-- name: hello
+- name: hello from pipeline
   image: busybox
   commands:
   - echo truc truc
@@ -12,3 +12,19 @@ steps:
 trigger:
   branch:
   - main
+
+  ---
+  kind: pipeline
+  type: docker
+  name: playwright tests
+
+  trigger:
+    repo:
+    - xored2410/plawright-drone
+
+steps:
+- name: playwright tests
+  image: node
+  commands:
+  - npm install
+  - npm run test:dev
