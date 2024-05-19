@@ -19,7 +19,7 @@ trigger:
 
 steps:
 - name: clone
- image: docker:git
+ image: node
  commands:
  - git clone https://github.com/xored2410/playwright-drone.git
  - npm install
