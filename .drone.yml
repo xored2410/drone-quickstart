@@ -1,26 +1,8 @@
 ---
-kind: pipeline
-type: docker
-name: console
-
-steps:
-- name: hello from pipeline
-  image: busybox
-  commands:
-  - echo truc truc
- 
-trigger:
-  branch:
-  - main
----
   kind: pipeline
   type: docker
   name: test
 
-
-trigger:
-  branch:
-  - master
 
 steps:
 - name: clone test repo
@@ -28,6 +10,7 @@ steps:
  commands:
  - git clone https://github.com/octocat/hello-world.git .
   - git checkout $DRONE_COMMIT
+  - echo HELLO_WORLD
 #  - git clone https://github.com/xored2410/playwright-drone.git
 #  - npm install
 #  - npm run test:dev
