@@ -5,7 +5,7 @@ name: test
 
 
 steps:
-- name: clone test repo
+- name: clone and run tests
   image: node
   commands:
   - git clone https://github.com/xored2410/playwright-drone.git
