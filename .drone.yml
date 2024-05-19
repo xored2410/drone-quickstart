@@ -12,8 +12,7 @@ steps:
 trigger:
   branch:
   - main
-
-  ---
+---
   kind: pipeline
   type: docker
   name: playwright tests
