@@ -19,7 +19,7 @@ trigger:
 
   trigger:
     repo:
-    - playwright-drone
+    - xored2410/playwright-drone
 
 steps:
 - name: playwright tests
