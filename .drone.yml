@@ -6,10 +6,17 @@ name: test
 steps:
 - name: clone and run tests
   image: node
+  environment: 
+    USERNAME:
+      from_secret: username
+    PASSWORD:
+      from_secret: password 
   commands:
   - git clone https://github.com/xored2410/playwright-drone.git
   - echo Trying to instal dependencies
   - cd playwright-drone
+  - echo $USERNAME
+  - echo $PASSWORD
   - npm install
   - npm run test:dev
 
