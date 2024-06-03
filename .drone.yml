@@ -18,7 +18,7 @@ steps:
   - echo $USERNAME
   - echo $PASSWORD
   - npm install
-  - USERNAME=$USERNAME PASSWORD=$PASSWORD npm run test:dev
+  - npm run test:dev
 
 
 # - name: playwright tests
